@@ -1,6 +1,22 @@
 {
   "messages": [
     {
+      "id": "survey-2026-11",
+      "type": "survey",
+      "date": "10/11/2026",
+      "minGames": 12,
+      "title": "Sondaggio: dicci cosa ne pensi! 📝",
+      "body": [
+        "Hai sbloccato tutto quello che si sblocca giocando: ora ci serve il tuo parere!",
+        "Sono circa 3 minuti, solo risposte a scelta. Alla fine del sondaggio trovi un codice: scrivilo qui sotto per ricevere 50 Ambra."
+      ],
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfhla_X2w5YKIZHhTJZpPhxk8vMl9JT2fNBTOQQmlYj4D03eA/viewform",
+      "reward": {
+        "ambra": 50,
+        "codeHash": "9015b10bb83fdad24bc72a58e8476f1f7b9307d668c8b7efa3bdd22c563e999b"
+      }
+    },
+    {
       "id": "welcome-2026-11",
       "type": "news",
       "date": "10/11/2026",
