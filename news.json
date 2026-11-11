@@ -14,7 +14,8 @@
       "reward": {
         "ambra": 50,
         "codeHash": "9015b10bb83fdad24bc72a58e8476f1f7b9307d668c8b7efa3bdd22c563e999b"
-      }
+      },
+      "lang": "it"
     },
     {
       "id": "welcome-2026-11",
@@ -24,6 +25,11 @@
       "body": [
         "Grazie per aver provato il gioco! Qui nella Posta troverai novità sugli aggiornamenti, eventi e sondaggi.",
         "Rispondendo ai sondaggi ricevi Ambra e ci aiuti a migliorare il gioco."
+      ],
+      "title_en": "Welcome to Dino Tower! 🦖",
+      "body_en": [
+        "Thanks for trying the game! Here in the Mail you'll find news about updates, events and surveys.",
+        "Answer surveys to get Amber and help us improve the game."
       ]
     }
   ]
