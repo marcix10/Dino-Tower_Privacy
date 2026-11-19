@@ -10,12 +10,16 @@
         "Hai sbloccato tutto quello che si sblocca giocando: ora ci serve il tuo parere!",
         "Sono circa 3 minuti, solo risposte a scelta. Alla fine del sondaggio trovi un codice: scrivilo qui sotto per ricevere 50 Ambra."
       ],
-      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfhla_X2w5YKIZHhTJZpPhxk8vMl9JT2fNBTOQQmlYj4D03eA/viewform",
+      "title_en": "Survey: tell us what you think! 📝",
+      "body_en": [
+        "You've unlocked everything you can unlock by playing: now we'd love your opinion!",
+        "It takes about 3 minutes, multiple choice only. At the end of the survey you'll find a code: enter it below to get 50 Amber."
+      ],
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScJFqaqIVjd6DPvc6H13UcmPRgTmRqmDZYIpRpAcEYc2TRF0w/viewform",
       "reward": {
         "ambra": 50,
         "codeHash": "9015b10bb83fdad24bc72a58e8476f1f7b9307d668c8b7efa3bdd22c563e999b"
-      },
-      "lang": "it"
+      }
     },
     {
       "id": "welcome-2026-11",
