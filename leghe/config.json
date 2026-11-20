@@ -1,30 +1,125 @@
 {
-  "_nota": "Premi delle classifiche di Dino Tower. Si possono cambiare qui senza toccare il gioco. tok = token (common, rare, epic). Le fasce vanno da 'da' ad 'a' (posizioni).",
+  "_nota": "Premi delle classifiche di Dino Tower (per ora solo Record e MemoTower; per aggiungerne una: combo CgkI5fvZ5twJEAIQGw, pure CgkI5fvZ5twJEAIQHA). Si cambiano qui senza toccare il gioco. tok = token (common, rare, epic). Le fasce vanno da 'da' ad 'a' (posizioni).",
   "classifiche": {
     "record": "CgkI5fvZ5twJEAIQGg",
-    "combo": "CgkI5fvZ5twJEAIQGw",
-    "pure": "CgkI5fvZ5twJEAIQHA",
     "memo": "CgkI5fvZ5twJEAIQHQ"
   },
   "giornalieri": [
-    { "da": 1, "a": 1, "ambra": 15, "bones": 500 },
-    { "da": 2, "a": 2, "ambra": 10, "bones": 500 },
-    { "da": 3, "a": 3, "ambra": 5, "bones": 500 },
-    { "da": 4, "a": 6, "tok": { "rare": 1 }, "bones": 350 },
-    { "da": 7, "a": 7, "tok": { "common": 3 }, "bones": 250 },
-    { "da": 8, "a": 8, "tok": { "common": 2 }, "bones": 250 },
-    { "da": 9, "a": 10, "tok": { "common": 1 }, "bones": 250 },
-    { "da": 11, "a": 100000, "bones": 150 }
+    {
+      "da": 1,
+      "a": 1,
+      "ambra": 15,
+      "bones": 500
+    },
+    {
+      "da": 2,
+      "a": 2,
+      "ambra": 10,
+      "bones": 500
+    },
+    {
+      "da": 3,
+      "a": 3,
+      "ambra": 5,
+      "bones": 500
+    },
+    {
+      "da": 4,
+      "a": 6,
+      "tok": {
+        "rare": 1
+      },
+      "bones": 350
+    },
+    {
+      "da": 7,
+      "a": 7,
+      "tok": {
+        "common": 3
+      },
+      "bones": 250
+    },
+    {
+      "da": 8,
+      "a": 8,
+      "tok": {
+        "common": 2
+      },
+      "bones": 250
+    },
+    {
+      "da": 9,
+      "a": 10,
+      "tok": {
+        "common": 1
+      },
+      "bones": 250
+    },
+    {
+      "da": 11,
+      "a": 100000,
+      "bones": 150
+    }
   ],
   "settimanali": [
-    { "da": 1, "a": 1, "ambra": 50, "bones": 1500 },
-    { "da": 2, "a": 2, "ambra": 35, "bones": 1500 },
-    { "da": 3, "a": 3, "ambra": 25, "bones": 1500 },
-    { "da": 4, "a": 6, "tok": { "rare": 2 }, "bones": 1000 },
-    { "da": 7, "a": 7, "tok": { "common": 3, "rare": 1 }, "bones": 700 },
-    { "da": 8, "a": 8, "tok": { "common": 2, "rare": 1 }, "bones": 700 },
-    { "da": 9, "a": 10, "tok": { "common": 1, "rare": 1 }, "bones": 700 },
-    { "da": 11, "a": 100000, "bones": 400 }
+    {
+      "da": 1,
+      "a": 1,
+      "ambra": 50,
+      "bones": 1500
+    },
+    {
+      "da": 2,
+      "a": 2,
+      "ambra": 35,
+      "bones": 1500
+    },
+    {
+      "da": 3,
+      "a": 3,
+      "ambra": 25,
+      "bones": 1500
+    },
+    {
+      "da": 4,
+      "a": 6,
+      "tok": {
+        "rare": 2
+      },
+      "bones": 1000
+    },
+    {
+      "da": 7,
+      "a": 7,
+      "tok": {
+        "common": 3,
+        "rare": 1
+      },
+      "bones": 700
+    },
+    {
+      "da": 8,
+      "a": 8,
+      "tok": {
+        "common": 2,
+        "rare": 1
+      },
+      "bones": 700
+    },
+    {
+      "da": 9,
+      "a": 10,
+      "tok": {
+        "common": 1,
+        "rare": 1
+      },
+      "bones": 700
+    },
+    {
+      "da": 11,
+      "a": 100000,
+      "bones": 400
+    }
   ],
   "giorni_validi": 7,
   "settimane_valide": 14
