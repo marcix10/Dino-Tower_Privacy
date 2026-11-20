@@ -91,6 +91,8 @@ function entry(kind, period, board, list, table) {
 }
 
 async function main() {
+  // finché i Secrets non ci sono, non fa niente (niente errori ogni 15 minuti)
+  if (!process.env.MOCK && !process.env.PGS_REFRESH_TOKEN) { console.log('Secrets di Play Giochi non ancora impostati: nessuna lettura.'); return; }
   const state = fs.existsSync(STATE_FILE) ? JSON.parse(fs.readFileSync(STATE_FILE, 'utf8')) : { days: {} };
   const out = fs.existsSync(OUT_FILE) ? JSON.parse(fs.readFileSync(OUT_FILE, 'utf8')) : { v: 1, rewards: [] };
   const today = googleDay(NOW);
