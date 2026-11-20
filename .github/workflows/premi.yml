@@ -1,0 +1,40 @@
+name: Premi classifiche
+
+# Ogni 15 minuti legge le classifiche di oggi di Play Giochi; quando il giorno di Google
+# finisce (9:00 in Italia) assegna i premi in premi.json (il gioco li legge come la posta).
+# Serve: Secrets PGS_CLIENT_ID, PGS_CLIENT_SECRET, PGS_REFRESH_TOKEN.
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: premi
+  cancel-in-progress: false
+
+jobs:
+  premi:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Leggi le classifiche e prepara i premi
+        env:
+          PGS_CLIENT_ID: ${{ secrets.PGS_CLIENT_ID }}
+          PGS_CLIENT_SECRET: ${{ secrets.PGS_CLIENT_SECRET }}
+          PGS_REFRESH_TOKEN: ${{ secrets.PGS_REFRESH_TOKEN }}
+        run: node leghe/leghe.js
+      - name: Salva se è cambiato qualcosa
+        run: |
+          git config user.name "dino-tower-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add leghe/stato.json premi.json
+          if git diff --cached --quiet; then echo "Niente di nuovo"; exit 0; fi
+          git commit -m "Premi classifiche: aggiornamento automatico"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && exit 0; sleep 5; done
+          exit 1
