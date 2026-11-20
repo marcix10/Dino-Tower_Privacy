@@ -5,7 +5,7 @@ name: Premi classifiche
 # Serve: Secrets PGS_CLIENT_ID, PGS_CLIENT_SECRET, PGS_REFRESH_TOKEN.
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
 
 permissions:
