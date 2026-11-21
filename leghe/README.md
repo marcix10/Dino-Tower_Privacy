@@ -2,7 +2,7 @@
 
 L'azione **Premi classifiche** (`.github/workflows/premi.yml`) gira ogni 15 minuti:
 legge le classifiche "di oggi" di Play Giochi e, quando il giorno di Google finisce
-(mezzanotte in California = 9:00 in Italia), scrive i premi in `premi.json`.
+(7:00 UTC: 8:00 in Italia d'inverno, 9:00 d'estate), scrive i premi in `premi.json`.
 Il lunedì aggiunge i premi della settimana (somma dei punteggi di ogni giorno).
 Il gioco legge `premi.json` e fa ritirare i premi a chi li ha vinti.
 

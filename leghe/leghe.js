@@ -1,7 +1,7 @@
 // Premi delle classifiche di Dino Tower (giornalieri e settimanali).
 // Gira su GitHub Actions ogni 15 minuti: legge le classifiche "di oggi" di Play Giochi,
 // tiene l'ultima lettura di ogni giorno e, quando il giorno di Google è finito
-// (mezzanotte in California = 9:00 in Italia), assegna i premi in premi.json.
+// (alle 7:00 UTC: 8:00 in Italia d'inverno, 9:00 d'estate), assegna i premi in premi.json.
 // La settimana (lunedì-domenica, giorni di Google) somma i punteggi finali di ogni giorno.
 // Senza rete verso Google: MOCK=file.json usa dati finti (per le prove).
 'use strict';
@@ -15,9 +15,10 @@ const STATE_FILE = path.join(DIR, 'stato.json');
 const OUT_FILE = path.join(ROOT, 'premi.json');
 const NOW = process.env.NOW ? new Date(process.env.NOW) : new Date();
 
-// giorno di Google (fuso della California) come AAAA-MM-GG
+// giorno di Google come AAAA-MM-GG: le classifiche giornaliere ripartono sempre alle 7:00 UTC
+// (UTC-7 tutto l'anno, senza ora legale): 8:00 in Italia d'inverno, 9:00 d'estate
 function googleDay(d) {
-  return new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Los_Angeles', year: 'numeric', month: '2-digit', day: '2-digit' }).format(d);
+  return new Date(d.getTime() - 7 * 3600000).toISOString().slice(0, 10);
 }
 function addDays(day, n) {
   const d = new Date(`${day}T12:00:00Z`);
